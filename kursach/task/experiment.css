@@ -1,0 +1,106 @@
+.end{
+    display: grid;
+    padding: 50px 100px;
+    grid-template-columns: 0.17fr 0.25fr 0.27fr 0.2fr;
+    gap: 10px;
+    align-items: start;
+    justify-content: center;
+    background-color: slateblue;
+    overflow: hidden;
+    border-top: 5px solid rgb(95, 142, 207);
+}
+
+.end a, p{
+    color: white;
+    font-size: 18px;
+    padding: 7px;
+    text-shadow: 0 0 2px black;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.end a:hover{
+    text-shadow: none;
+    color: black;
+}
+
+.fastTravel, .shopCatalog, .contacts, .socialMedia{
+    justify-items: start;
+    display: grid;
+    align-content: space-between;
+}
+
+.contacts{
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.contacts a, p{
+    padding: 0;
+}
+
+.contacts h2{
+    grid-column: 1 / span 2;
+}
+
+.socialMedia a{
+    text-shadow: none;
+    color: black;
+    height: 30px;
+    width: 30px;
+    background: white;
+    border-radius: 50%;
+    position: relative;
+    z-index: 4;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    cursor: pointer;
+}
+
+.socialMedia h2 {
+    grid-column: 1 / span 5;
+}
+
+.socialMedia a::after {
+    content: "";
+    border-radius: 50%;
+    background: linear-gradient(to bottom right, #800080, #ecd8e9);
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: scale(0, 0);
+}
+
+.socialMedia a:hover::after {
+    transition: all 0.3s ease-out;
+    transform: scale(1, 1);
+}
+
+.socialMedia a{
+    line-height: 30px;
+    font-size: 15px;
+}
+
+@media (max-width: 1000px){
+    .end {
+        grid-template-columns: 1fr 1fr;
+        justify-content: stretch;
+    }
+}
+
+@media (max-width: 720px) {
+    .contacts{
+        grid-template-columns: 1fr;
+    }
+
+    .contacts h2{
+        grid-column: 1;
+    }
+
+    .end {
+        grid-template-columns: 1fr;
+    }
+}

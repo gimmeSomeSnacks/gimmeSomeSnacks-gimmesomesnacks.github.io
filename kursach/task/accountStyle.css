@@ -1,0 +1,560 @@
+#toggleGoods {
+    visibility: hidden;
+}
+
+.hamburgerGoods{
+    background-color: SlateBlue;
+}
+
+.btnGoods {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    max-width: 50px;
+    max-height: 50px;
+    z-index: 6;
+}
+
+.btnGoods img{
+    width: 100%;
+    height: 100%;
+}
+
+.fullBackground{
+    z-index: 2;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    transition: 0.5s ease;
+    background: linear-gradient(to right, #e7e7f8, #6495ed, #007fff);
+    opacity: 50%;
+    width: 100%;
+}
+
+.boxGoods {
+    box-shadow: 0 0 5px rgb(128, 128, 128);
+    background: white;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    margin: 0;
+    padding: 40px 0;
+    transition: 0.5s ease;
+    z-index: 4;
+    width: 30%;
+}
+
+.boxGoods > *:not(a){
+    margin: 24px;
+    padding-bottom: 5px;
+    border-bottom: solid black 2px;
+}
+
+.boxGoods h2{
+    width: 158px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.cardGood{
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    justify-items: center;
+}
+
+.cardGood p{
+    margin: 0;
+    width: 100%;
+    height: 30%;
+}
+
+.cardGood img{
+    grid-row: 1 / span 3;
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+}
+
+#toggleGoods:checked ~ * {
+    visibility: visible;
+    right: 0;
+}
+
+.shineButton {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 30px;
+    position: absolute;
+    left: 50%;
+    bottom: 100px;
+    transform: translate(-50%);
+    overflow: hidden;
+    border: 2px solid #007fff;
+    border-radius: 8px;
+    font-size: 25px;
+    color: #007fff;
+    transition: .2s ease-in-out;
+}
+
+.shineButton:before {
+    content: "";
+    background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: -1%;
+    left: -100%;
+    transform: skewX(-45deg);
+}
+.shineButton:hover {
+    background: #6495ed;
+    color: #fff;
+}
+.shineButton:hover:before {
+    left: 150px;
+    transition: .5s ease-in-out;
+}
+
+
+@media (max-width: 720px) {
+    .fullBackground{
+        opacity: 0;
+    }
+    .boxGoods{
+        width: 100%;
+    }
+}
+
+#toggleGoods {
+    visibility: hidden;
+}
+
+.hamburgerGoods{
+    background-color: SlateBlue;
+}
+
+.hamburgerGoods p, a{
+    text-shadow: none;
+    color: black
+}
+
+.btnGoods {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    max-width: 50px;
+    max-height: 50px;
+    z-index: 6;
+}
+
+.btnGoods img{
+    width: 100%;
+    height: 100%;
+}
+
+.fullBackground{
+    z-index: 2;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    transition: 0.5s ease;
+    background: linear-gradient(to right, #e7e7f8, #6495ed, #007fff);
+    opacity: 50%;
+    width: 100%;
+}
+
+.boxGoods {
+    box-shadow: 0 0 5px rgb(128, 128, 128);
+    background: white;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    margin: 0;
+    padding: 40px 0;
+    transition: 0.5s ease;
+    z-index: 4;
+    width: 30%;
+}
+
+.boxGoods > *:not(a){
+    margin: 24px;
+    padding-bottom: 5px;
+    border-bottom: solid black 2px;
+}
+
+.boxGoods h2{
+    width: 158px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.cardGood{
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    justify-items: center;
+}
+
+.cardGood p{
+    margin: 0;
+    width: 100%;
+    height: 30%;
+}
+
+.cardGood img{
+    grid-row: 1 / span 3;
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+}
+
+#toggleGoods:checked ~ * {
+    visibility: visible;
+    right: 0;
+}
+
+.shineButton {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 30px;
+    position: absolute;
+    left: 50%;
+    bottom: 100px;
+    transform: translate(-50%);
+    overflow: hidden;
+    border: 2px solid #007fff;
+    border-radius: 8px;
+    font-size: 25px;
+    color: #007fff;
+    transition: .2s ease-in-out;
+}
+
+.shineButton:before {
+    content: "";
+    background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: -1%;
+    left: -100%;
+    transform: skewX(-45deg);
+}
+.shineButton:hover {
+    background: #6495ed;
+    color: #fff;
+}
+.shineButton:hover:before {
+    left: 150px;
+    transition: .5s ease-in-out;
+}
+
+
+@media (max-width: 720px) {
+    .fullBackground{
+        opacity: 0;
+    }
+    .boxGoods{
+        width: 100%;
+    }
+}
+#toggleGoods {
+    visibility: hidden;
+}
+
+.hamburgerGoods{
+    background-color: SlateBlue;
+}
+
+.hamburgerGoods p, a{
+    text-shadow: none;
+    color: black
+}
+
+.btnGoods {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    max-width: 50px;
+    max-height: 50px;
+    z-index: 6;
+}
+
+.btnGoods img{
+    width: 100%;
+    height: 100%;
+}
+
+.fullBackground{
+    z-index: 2;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    transition: 0.5s ease;
+    background: linear-gradient(to right, #e7e7f8, #6495ed, #007fff);
+    opacity: 50%;
+    width: 100%;
+}
+
+.boxGoods {
+    box-shadow: 0 0 5px rgb(128, 128, 128);
+    background: white;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    margin: 0;
+    padding: 40px 0;
+    transition: 0.5s ease;
+    z-index: 4;
+    width: 30%;
+}
+
+.boxGoods > *:not(a){
+    margin: 24px;
+    padding-bottom: 5px;
+    border-bottom: solid black 2px;
+}
+
+.boxGoods h2{
+    width: 158px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.cardGood{
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    justify-items: center;
+}
+
+.cardGood p{
+    margin: 0;
+    width: 100%;
+    height: 30%;
+}
+
+.cardGood img{
+    grid-row: 1 / span 3;
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+}
+
+#toggleGoods:checked ~ * {
+    visibility: visible;
+    right: 0;
+}
+
+.shineButton {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 30px;
+    position: absolute;
+    left: 50%;
+    bottom: 100px;
+    transform: translate(-50%);
+    overflow: hidden;
+    border: 2px solid #007fff;
+    border-radius: 8px;
+    font-size: 25px;
+    color: #007fff;
+    transition: .2s ease-in-out;
+}
+
+.shineButton:before {
+    content: "";
+    background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: -1%;
+    left: -100%;
+    transform: skewX(-45deg);
+}
+.shineButton:hover {
+    background: #6495ed;
+    color: #fff;
+}
+.shineButton:hover:before {
+    left: 150px;
+    transition: .5s ease-in-out;
+}
+
+
+@media (max-width: 720px) {
+    .fullBackground{
+        opacity: 0;
+    }
+    .boxGoods{
+        width: 100%;
+    }
+}
+#toggleGoods {
+    visibility: hidden;
+}
+
+.hamburgerGoods{
+    background-color: SlateBlue;
+}
+
+.hamburgerGoods p, a{
+    text-shadow: none;
+    color: black
+}
+
+.btnGoods {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    max-width: 50px;
+    max-height: 50px;
+    z-index: 6;
+}
+
+.btnGoods img{
+    width: 100%;
+    height: 100%;
+}
+
+.fullBackground{
+    z-index: 2;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    transition: 0.5s ease;
+    background: linear-gradient(to right, #e7e7f8, #6495ed, #007fff);
+    opacity: 50%;
+    width: 100%;
+}
+
+.boxGoods {
+    box-shadow: 0 0 5px rgb(128, 128, 128);
+    background: white;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    margin: 0;
+    padding: 40px 0;
+    transition: 0.5s ease;
+    z-index: 4;
+    width: 30%;
+}
+
+.boxGoods > *:not(a){
+    margin: 24px;
+    padding-bottom: 5px;
+    border-bottom: solid black 2px;
+}
+
+.boxGoods h2{
+    width: 158px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.cardGood{
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    justify-items: center;
+}
+
+.cardGood p{
+    margin: 0;
+    width: 100%;
+    height: 30%;
+}
+
+.cardGood img{
+    grid-row: 1 / span 3;
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+}
+
+#toggleGoods:checked ~ * {
+    visibility: visible;
+    right: 0;
+}
+
+.shineButton {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 30px;
+    position: absolute;
+    left: 50%;
+    bottom: 100px;
+    transform: translate(-50%);
+    overflow: hidden;
+    border: 2px solid #007fff;
+    border-radius: 8px;
+    font-size: 25px;
+    color: #007fff;
+    transition: .2s ease-in-out;
+}
+
+.shineButton:before {
+    content: "";
+    background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: -1%;
+    left: -100%;
+    transform: skewX(-45deg);
+}
+.shineButton:hover {
+    background: #6495ed;
+    color: #fff;
+}
+.shineButton:hover:before {
+    left: 150px;
+    transition: .5s ease-in-out;
+}
+
+
+@media (max-width: 720px) {
+    .fullBackground{
+        opacity: 0;
+    }
+    .boxGoods{
+        width: 100%;
+    }
+}

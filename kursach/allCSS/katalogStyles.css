@@ -1,0 +1,271 @@
+a{
+    text-decoration: none;
+}
+
+.stickyText{
+    position: sticky;
+    top: 50px;
+    z-index: 5;
+}
+
+.stickyText p{
+    background: #E66360;
+    border-radius: 50px;
+    background-size: contain;
+    color: white;
+    font-size: 2em;
+    padding: 20px;
+    text-shadow: none;
+}
+
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.product img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    backface-visibility: hidden;
+}
+
+.section{
+    margin: 20px 0;
+}
+
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.catalogFlex{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 -15px -30px;
+}
+
+.product::before {
+    content: '';
+    background: rgb(128, 128, 128);
+    width: 100%;
+    height: 50%;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 2;
+    transition-property: top, opacity;
+    transition-duration: 0.3s;
+}
+
+.caption {
+    width: 100%;
+    padding-bottom: 20px;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    text-align: center;
+}
+
+.caption p {
+    position: relative;
+    display: block;
+    opacity: 0;
+    transition-property: top, opacity;
+    transition-duration: 0.3s;
+    transition-delay: 0s;
+}
+
+.caption .title {
+    top: 20px;
+    font-size: 18px;
+}
+
+.caption .info {
+    top: 30px;
+    font-size: 16px;
+}
+
+.product:hover::before{
+    top: 50%;
+    opacity: 70%;
+}
+
+.product:hover span {
+    top: 0;
+    opacity: 1;
+}
+
+.product:hover p{
+    opacity: 1;
+}
+
+.product:hover .title {
+    transition-delay: 0.15s;
+}
+
+.product:hover .info {
+    transition-delay: 0.25s;
+}
+
+
+.product span{
+    z-index: 4;
+    position: absolute;
+}
+
+.product:hover span:nth-child(2) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to left, white, #ff7b00, #ff2ca0);
+    animation: 2s animateTop linear infinite;
+}
+
+
+@keyframes animateTop {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.product:hover span:nth-child(3) {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to bottom, white, #ff7b00, #ff2ca0);
+    animation: 2s animateLeft linear -3s infinite;
+}
+
+@keyframes animateLeft {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.product:hover span:nth-child(4) {
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to top, white, #ff7b00, #ff2ca0);
+    animation: 2s animateRight linear -1s infinite;
+}
+
+@keyframes animateRight {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }   
+}
+
+.product:hover span:nth-child(5) {
+    top: 99.5%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, white, #ff7b00, #ff2ca0);
+    animation: 2s animateBottom linear infinite;
+}
+
+@keyframes animateBottom {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.removeAndPrice{
+    margin-bottom: 10px;
+    justify-self: start;
+}
+
+.remove-btn:nth-child(2):hover{
+    color:red;
+    border: 2px solid red;
+    background-color: white;
+}
+
+.remove-btn:nth-child(3):hover{
+    color: #E87302;
+    border: 2px solid #E87302;
+    background-color: white;
+}
+
+.remove-btn:nth-child(4):hover{
+    color:green;
+    border: 2px solid green;
+    background-color: white;
+}
+
+.remove-btn{
+    background: #F07B91;
+    border: 2px solid #F02C6E;
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#empty{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+}
+
+@media (max-width: 1200px){
+    .product{
+        width: 400px;
+        height: 400px;
+    }
+
+    .stickyText{
+        font-size: 30px;
+        top: 40px;
+    }
+
+    .caption .title {
+        top: 20px;
+        font-size: 25px;
+    }
+    
+    .caption .info {
+        top: 30px;
+        font-size: 20px;
+    }
+
+    .remove-btn{
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+        margin-right: 40px;
+    }
+}

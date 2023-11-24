@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Корзина</title>
+  <style>
+    .cart-item {
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    .remove-btn {
+      cursor: pointer;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Добавленные товары</h2>
+
+  <div id="cart-items"></div>
+
+  <script>
+    function fillCartItems() {
+      let cartItemsElement = document.getElementById("cart-items");
+      cartItemsElement.innerHTML = ""; // Очищаем содержимое перед обновлением
+
+      // Получаем товары из корзины в локальном хранилище
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      if (cart.length === 0) {
+        cartItemsElement.innerHTML = "Корзина пуста";
+      } else {
+        cart.forEach((item, index) => {
+          let cartItemElement = document.createElement('div');
+          cartItemElement.classList.add('cart-item');
+          cartItemElement.innerHTML = `
+            <p>${item.name}</p>
+            <p>${item.amount} x ${item.price} рублей</p>
+            <button class="remove-btn" onclick="removeItem(${index})">Удалить</button>
+          `;
+          cartItemsElement.appendChild(cartItemElement);
+        });
+      }
+    }
+
+    function removeItem(index) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      // Удаляем товар из корзины по индексу
+      cart.splice(index, 1);
+
+      // Обновляем корзину в локальном хранилище
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+      // Перерисовываем список товаров в корзине
+      fillCartItems();
+    }
+
+    // Загрузка данных при загрузке страницы
+    window.onload = function () {
+      fillCartItems();
+    };
+  </script>
+</body>
+</html>

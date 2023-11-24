@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Товар 2</title>
+  <style>
+    .product {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Товар 2</h2>
+
+  <div class="product" data-name="Товар 2" data-price="200">
+    <img src="path/to/image2.jpg" alt="Товар 2">
+    <p id="product-name">Товар 2</p>
+    <p id="product-price">200 рублей</p>
+    <div>
+      <button onclick="decrementQuantity('quantity')">-</button>
+      <input type="number" min="1" value="1" id="quantity">
+      <button onclick="incrementQuantity('quantity')">+</button>
+    </div>
+    <button onclick="addToCart('quantity')">Добавить</button>
+  </div>
+
+  <a href="cart.html">Перейти в корзину</a>
+
+  <script>
+    function addToCart(quantityId) {
+      let productName = document.getElementById("product-name").innerHTML;
+      let productPrice = document.getElementById("product-price").innerHTML;
+      productPrice = parseInt(productPrice.substr(0, productPrice.length - 6).replaceAll(' ', ''));
+      let inputStepper = document.getElementById(quantityId);
+      let productAmount = parseInt(inputStepper.value);
+
+      let item = {
+        name: productName,
+        price: productPrice,
+        amount: productAmount,
+      };
+
+      // Получаем текущий список товаров в корзине из локального хранилища
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      // Проверяем, есть ли уже товар с таким именем в корзине
+      let existingItem = cart.find(cartItem => cartItem.name === item.name);
+
+      // Если товар существует, обновляем количество, иначе добавляем новый товар
+      if (existingItem) {
+        existingItem.amount += item.amount;
+      } else {
+        cart.push(item);
+      }
+
+      // Сохраняем обновленный список товаров в корзине в локальное хранилище
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+      alert('Товар добавлен в корзину!');
+    }
+
+    function decrementQuantity(quantityId) {
+      let quantityInput = document.getElementById(quantityId);
+      if (parseInt(quantityInput.value) > 1) {
+        quantityInput.value = parseInt(quantityInput.value) - 1;
+      }
+    }
+
+    function incrementQuantity(quantityId) {
+      let quantityInput = document.getElementById(quantityId);
+      quantityInput.value = parseInt(quantityInput.value) + 1;
+    }
+  </script>
+</body>
+</html>

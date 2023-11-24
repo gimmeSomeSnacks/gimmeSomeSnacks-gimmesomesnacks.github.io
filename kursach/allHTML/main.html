@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../resources/ourfavicon.png">
+    <title>Магазин детских игрушек</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href = "../allCSS/mainStyles.css" rel = "stylesheet">
+    <link href = "../allCSS/menuStyles.css" rel = "stylesheet">
+  </head>
+  <body>
+    
+    <header>
+      <nav class = "menu">
+        <img src = "../resources/logo.png" alt = "logo" align = "left" height="82px" width="300px">
+        <a href = "main.html"><div class = "menuBox" style = " background-color: #ff8888;"><p style = "color: black;">Главная страница</p></div></a>
+        <a href = "katalog.html"><div class = "menuBox" ><p>Каталог</p></div></a>
+        <a href = "moreInf.html"><div class = "menuBox"  id = "last"><p>Частые вопросы</p></div></a>
+      </nav>
+      <nav class = "hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
+        <ul class="menu__box">
+          <li><a class = "menu__item" href = "main.html">Главная страница</a></li>
+          <li><a class = "menu__item" href = "katalog.html">Каталог</a></li>
+          <li><a class = "menu__item" href = "moreInf.html">О нас</a></li>
+        </ul>
+      </nav>
+      <div class = "hamburgerGoods">
+        <input id = "toggleGoods" type = "checkbox" onclick = "fillCartItems()"/>
+        <label class = "btnGoods" for = "toggleGoods">
+          <img src = "../resources/korsina.png">
+        </label>
+        <div class = "fullBackground"> </div>
+        <div class="boxGoods">
+          <h2>Ваша Корзина</h2>
+          <div id="cart-items"></div>
+        </div>
+      </div>
+    </header>
+    <script src = "/kursach/allJS/burger-order-manager.js"></script>
+    <h1>Разделы каталога</h1>
+    <div class = "spisok">
+      <div class = "product">
+        <a href = "katalog.html#fig"><img src = "../resources/funko.jpg" title = "Фигурки" class = "spisokImg"></a>
+        <div class = "caption">
+          <span>Фигурки</span>
+        </div>
+      </div>
+      <div class = "product">
+        <a href = "katalog.html#construct"><img src = "../resources/lego.jpg" title = "Конструкторы"  class = "spisokImg"></a>
+        <div class = "caption">
+          <span>Конструкторы</span>
+        </div>
+      </div>
+      <div class = "product">
+        <a href = "katalog.html#nastol"><img src = "../resources/nastolki.jpg" title = "Настольные игры"  class = "spisokImg"></a>
+        <div class = "caption">
+          <span>Настольные игры</span>
+        </div>
+      </div>
+      <div class = "product">
+        <a href = "katalog.html#women" id = "secondFloor"><img src = "../resources/women.jpg" title = "Девочкам"  class = "spisokImg"></a>
+        <div class = "caption">
+          <span>Для Девочек</span>
+        </div>
+      </div>
+    </div>
+    
+    <h2 id = "popularH2">Популярно</h2>
+    <div class = "moreToys">
+        <div class = "productPopular">
+            <a href = "products/product5.html"><img src = "../resources/fig5.jpg" class = "popularImgs"></a>
+            <div class = "captionPopular">
+                <a  href = "products/product5.html"><span class = "title">Funko POP! Star Wars: Baby Yoda</span></a>
+                <a  href = "products/product5.html"><span class = "info">663,00 ₽</span></a>
+            </div>
+        </div>
+        <div class = "productPopular">
+            <a href = "products/product8.html"><img src = "../resources/fig8.jpg" class = "popularImgs"></a>
+            <div class = "captionPopular">
+                <a href = "products/product8.html"><span class = "title">LEGO Бугатти Широн синий</span></a>
+                <a href = "products/product8.html"><span class = "info">3 813,00 ₽</span></a>
+            </div>
+        </div>
+        <div class = "productPopular">
+            <a href = "products/product12.html"><img src = "../resources/fig12.jpg" class = "popularImgs"></a>
+            <div class = "captionPopular">
+                <a href = "products/product12.html"><span class = "titlePopular">Crowd Games Пэчворк</span></a>
+                <a href = "products/product12.html"><span class = "infoPopular">1 190,00 ₽</span></a>
+            </div>
+        </div>
+        <div class = "productPopular">
+            <a href = "products/product16.html"><img src = "../resources/fig16.jpg" class = "popularImgs"></a>
+            <div class = "captionPopular">
+                <a href = "products/product16.html"><span class = "titlePopular">L.O.L. Surprise фигурка Tiny Toys</span></a>
+                <a href = "products/product16.html"><span class = "infoPopular">350,00 ₽</span></a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="end">
+        <div class="fastTravel">
+            <h2>Быстрая навигация</h2>
+            <a href="main.html">Главная</a>
+            <a href="katalog.html">Каталог</a>
+            <a href = "moreInf.html">Частые вопросы</a>
+        </div>
+        <div class="shopCatalog">
+            <h2>Быстрые ссылки на разделы в каталоге</h2>
+            <a href="katalog.html#fig">Фигурки</a>
+            <a href="katalog.html#construct">Конструкторы</a>
+            <a href="katalog.html#nastol">Настольные игры</a>
+            <a href="katalog.html#women">Игрушки для девочек</a>
+        </div>
+        <div class = "contacts">
+            <h2>Связаться с нами</h2>
+            <p>Понедельник - Пятница</p>
+            <p>09 : 00 - 18 : 00</p>
+            <p style="color: white;">Наш номер телефона:</p>
+            <a href="tel:89175423367">+7 (917) 542-33-67</a>
+            <p style="color: white;">Наша почта:</p>
+            <a href="mailto:n-tuganov@gmail.com">n-tuganov@gmail.com</a>
+            <p>Менеджер: </p>
+            <p>Туганов Н.А. ИКБО-20-22</p>
+        </div>
+        <div class = "socialMedia">
+            <h2>Мы в социальных сетях</h2>
+            <a href = "https://vk.com/brrr0kk0li"><i class = "fab fa-vk"></i></a>
+            <a href = "https://www.facebook.com/?locale=ru_RU"><i class = "fab fa-facebook-f"></i></a>
+            <a href = "https://www.youtube.com"><i class = "fab fa-youtube"></i></a>
+        </div>
+    </footer>
+  </body>
+</html>

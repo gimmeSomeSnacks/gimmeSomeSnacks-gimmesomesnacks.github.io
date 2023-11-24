@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="../resources/ourfavicon.png">
+  <title>Каталог</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href="https://myfonts.ru/myfonts?fonts=bonjour-mon-ami-rus" rel="stylesheet" type="text/css" />
+  <link href="../allCSS/katalogStyles.css" rel="stylesheet">
+  <link href="../allCSS/menuStyles.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+    <nav class = "menu">
+      <img src = "/kursach/resources/logo.png" alt = "logo" align = "left" height = "82px" width = "300px">
+      <a href="main.html"><div class = "menuBox"><p>Главная страница</p></div></a>
+      <a href="katalog.html"><div class = "menuBox" style = " background-color: #ff8888;"><p style="color: black;">Каталог</p></div></a>
+      <a href="moreInf.html"><div class = "menuBox" id = "last"><p>Частые вопросы</p></div></a>
+    </nav>
+    <nav class="hamburger-menu">
+      <input id="menu__toggle" type="checkbox" />
+      <label class="menu__btn" for="menu__toggle">
+        <span></span>
+      </label>
+      <ul class="menu__box">
+        <li><a class="menu__item" href="main.html">Главная страница</a></li>
+        <li><a class="menu__item" href="katalog.html">Каталог</a></li>
+        <li><a class="menu__item" href="moreInf.html">О нас</a></li>
+      </ul>
+    </nav>
+    <div class="hamburgerGoods">
+      <input id="toggleGoods" type="checkbox" onclick="fillCartItems()" />
+      <label class="btnGoods" for="toggleGoods">
+        <img src="../resources/korsina.png">
+      </label>
+      <div class="fullBackground"> </div>
+      <div class="boxGoods">
+        <h2>Ваша Корзина</h2>
+        <div id="cart-items"></div>
+      </div>
+    </div>
+  </header>
+  <script src = "/kursach/allJS/burger-order-manager.js"></script>
+  <main class = "section">
+    <div class = "container">
+      <div class = "catalogFlex">
+        <span id = "fig"></span>
+        <div class="stickyText">
+          <p>Фигурки</p>
+        </div>
+        <div class="catalog">
+          <div class="product">
+            <a href="products/product1.html"><img src="../resources/fig1.jpg"></a>
+            <span></span><span></span><span></span><span></span>
+            <div class="caption">
+              <a href="products/product1.html">
+                <p class="title">Funko POP: Harry Potter S5 – Hedwig Exclusive</p>
+              </a>
+              <a href="products/product1.html">
+                <p class="info">1 250,00 ₽</p>
+              </a>
+            </div>
+          </div>
+          <div class="product">
+            <a href="products/product2.html"><img src="../resources/fig2.jpg"></a>
+            <span></span><span></span><span></span><span></span>
+            <div class="caption">
+              <a href="products/product2.html">
+                <p class="title">Funko POP! Spider-Man: No Way Home</p>
+              </a>
+              <a href="products/product2.html">
+                <p class="info">949,00 ₽</p>
+              </a>
+            </div>
+          </div>
+          <div class="product">
+            <a href="products/product3.html"><img src="../resources/fig3.jpg"></a>
+            <span></span><span></span><span></span><span></span>
+            <div class="caption">
+              <a href="products/product3.html">
+                <p class="title">Funko POP! Heroes Batman: Batman (1989)</p>
+              </a>
+              <a href="products/product3.html">
+                <p class="info">1 990,00 ₽</p>
+              </a>
+            </div>
+          </div>
+          <div class="product">
+            <a href="products/product4.html"><img src="../resources/fig4.jpg"></a>
+            <span></span><span></span><span></span><span></span>
+            <div class="caption">
+              <a href="products/product4.html">
+                <p class="title">Funko POP! Animation Simpsons Bartigula Bart</p>
+              </a>
+              <a href="products/product4.html">
+                <p class="info">1 943,00 ₽</p>
+              </a>
+            </div>
+          </div>
+          <div class="product">
+            <a href="products/product5.html"><img src="../resources/fig5.jpg"></a>
+            <span></span><span></span><span></span><span></span>
+            <div class="caption">
+              <a href="products/product5.html">
+                <p class="title">Funko POP! Star Wars: Baby Yoda</p>
+              </a>
+              <a href="products/product5.html">
+                <p class="info">1 197,00 ₽</p>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <span id="construct"></span>
+        <div class="stickyText">
+          <p>Конструкторы</p>
+        </div>
+        <div class="catalog">
+          <div class="product">
+            <a href="products/product6.html"><img src="../resources/fig6.jpg"></a>
+            <span></span><span></span><span></span><span></span>
+            <div class="caption">
+              <a href="products/product6.html">
+                <p class="title">LEGO Architecture Нью-Йорк</p>
+              </a>
+              <a href="products/product6.html">
+                <p class="info">8 599,00 ₽</p>
+              </a>
+            </div>
+          </div>
+          <div class="product">
+            <a href="products/product7.html"><img src="../resources/fig7.jpg"></a>
+            <span></span><span></span><span></span><span></span>
+            <div class="caption">
+              <a href="products/product7.html">
+                <p class="title">LEGO DC Comics Super Heroes "Бэтмобиль"</p>
+              </a>
+              <a href="products/product7.html">
+                <p class="info">7 899,00 ₽</p>
+              </a>
+            </div>
+          </div>
+          <div class="product">
+            <a href="products/product8.html"><img src="../resources/fig8.jpg"></a>
+            <span></span><span></span><span></span><span></span>
+            <div class="caption">
+              <a href="products/product8.html">
+                <p class="title">LEGO Бугатти Широн синий</p>
+              </a>
+              <a href="products/product8.html">
+                <p class="info">3 509,00 ₽</p>
+              </a>
+            </div>
+          </div>
+          <div class="product">
+            <a href="products/product9.html"><img src="../resources/fig9.jpg"></a>
+            <span></span><span></span><span></span><span></span>
+            <div class="caption">
+              <a href="products/product9.html">
+                <p class="title">LEGO Creator 3-in-1 Экзотический попугай</p>
+              </a>
+              <a href="products/product9.html">
+                <p class="info">2 599,00 ₽</p>
+              </a>
+            </div>
+          </div>
+          <div class="product">
+            <a href="products/product10.html"><img src="../resources/fig10-1.jpg"></a>
+            <span></span><span></span><span></span><span></span>
+            <div class="caption">
+              <a href="products/product10.html">
+                <p class="title">LEGO Minecraft Битва в глубинной тьме</p>
+              </a>
+              <a href="products/product10.html">
+                <p class="info">1 599,00 ₽</p>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <span id="nastol"></span>
+        <div class="stickyText">
+          <p>Настольные игры</p>
+        </div>
+        <div class="catalog">
+          <div class="product">
+            <a href="products/product11.html"><img src="../resources/fig11-1.jpg"></a>
+            <span></span><span></span><span></span><span></span>
+            <div class="caption">
+              <a href="products/product11.html">
+                <p class="title">Disney Гравити Фолз Бесконечное лето</p>
+              </a>
+              <a href="products/product11.html">
+                <p class="info">1 490,00 ₽</p>
+              </a>
+            </div>
+          </div>
+          <div class="product">
+            <a href="products/product12.html"><img src="../resources/fig12-1.jpg"></a>
+            <span></span><span></span><span></span><span></span>
+            <div class="caption">
+              <a href="products/product12.html">
+                <p class="title">Crowd Games Пэчворк</p>
+              </a>
+              <a href="products/product12.html">
+                <p class="info">1 240,00 ₽</p>
+              </a>
+            </div>
+          </div>
+          <div class="product">
+            <a href="products/product13.html"><img src="../resources/fig13-1.jpg"></a>
+            <span></span><span></span><span></span><span></span>
+            <div class="caption">
+              <a href="products/product13.html">
+                <p class="title">Hobby World Каркассон 9: Холмы и овцы</p>
+              </a>
+              <a href="products/product13.html">
+                <p class="info">990,00 ₽</p>
+              </a>
+            </div>
+          </div>
+          <div class="product">
+            <a href="products/product14.html"><img src="../resources/fig14-1.jpg"></a>
+            <span></span><span></span><span></span><span></span>
+            <div class="caption">
+              <a href="products/product14.html">
+                <p class="title">Колонизаторы Catan : Города и рыцари</p>
+              </a>
+              <a href="products/product14.html">
+                <p class="info">3 990,00 ₽</p>
+              </a>
+            </div>
+          </div>
+          <div class="product">
+            <a href="products/product15.html"><img src="../resources/fig15-3.jpg"></a>
+            <span></span><span></span><span></span><span></span>
+            <div class="caption">
+              <a href="products/product15.html">
+                <p class="title">"Эволюция"</p>
+              </a>
+              <a href="products/product15.html">
+                <p class="info">1 390,00 ₽</p>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <span id="women"></span>
+        <div class="stickyText">
+          <p>Игрушки для девочек</p>
+        </div>
+        <div class="catalog">
+          <div class="product">
+            <a href="products/product16.html"><img src="../resources/fig16.jpg"></a>
+            <span></span><span></span><span></span><span></span>
+            <div class="caption">
+              <a href="products/product16.html">
+                <p class="title">L.O.L. Surprise фигурка Tiny Toys</p>
+              </a>
+              <a href="products/product16.html">
+                <p class="info">796,00 ₽</p>
+              </a>
+            </div>
+          </div>
+          <div class="product">
+            <a href="products/product17.html"><img src="../resources/fig17.jpg"></a>
+            <span></span><span></span><span></span><span></span>
+            <div class="caption">
+              <a href="products/product17.html">
+                <p class="title">Бэби Аннабель Кукла</p>
+              </a>
+              <a href="products/product17.html">
+                <p class="info">10 439,00 ₽</p>
+              </a>
+            </div>
+          </div>
+          <div class="product">
+            <a href="products/product18.html"><img src="../resources/fig18.jpg"></a>
+            <span></span><span></span><span></span><span></span>
+            <div class="caption">
+              <a href="products/product18.html">
+                <p class="title">Набор детской косметики L.O.L. "Книжка"</p>
+              </a>
+              <a href="products/product18.html">
+                <p class="info">979,00 ₽</p>
+              </a>
+            </div>
+          </div>
+          <div class="product">
+            <a href="products/product19.html"><img src="../resources/fig19.jpg"></a>
+            <span></span><span></span><span></span><span></span>
+            <div class="caption">
+              <a href="products/product19.html">
+                <p class="title" style="margin-bottom: 0">Набор для создания украшений Sycomore Lovely Box «Многорядные
+                  браслеты»</p>
+              </a>
+              <a href="products/product19.html">
+                <p class="info" style="margin-top: 0">2 589,00 ₽</p>
+              </a>
+            </div>
+          </div>
+          <div class="product">
+            <a href="products/product20.html"><img src="../resources/fig20.jpg"></a>
+            <span></span><span></span><span></span><span></span>
+            <div class="caption">
+              <a href="products/product20.html">
+                <p class="title" style="margin-bottom: 0">Интерактивная мягкая игрушка Skyrocket «Лабрадудель Моджи»</p>
+              </a>
+              <a href="products/product20.html">
+                <p class="info" style="margin-top: 0">18 145,00 ₽</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src = "/kursach/allJS/sticky-script.js"></script>
+  <footer class="end">
+    <div class="fastTravel">
+      <h2>Быстрая навигация</h2>
+      <a href="main.html">Главная</a>
+      <a href="katalog.html">Каталог</a>
+      <a href = "moreInf.html">Частые вопросы</a>
+    </div>
+    <div class="shopCatalog">
+      <h2>Быстрые ссылки на разделы в каталоге</h2>
+      <a href="katalog.html#fig">Фигурки</a>
+      <a href="katalog.html#construct">Конструкторы</a>
+      <a href="katalog.html#nastol">Настольные игры</a>
+      <a href="katalog.html#women">Игрушки для девочек</a>
+    </div>
+    <div class = "contacts">
+      <h2>Связаться с нами</h2>
+      <p>Понедельник - Пятница</p>
+      <p>09 : 00 - 18 : 00</p>
+      <p style="color: white;">Наш номер телефона:</p>
+      <a href="tel:89175423367">+7 (917) 542-33-67</a>
+      <p style="color: white;">Наша почта:</p>
+      <a href="mailto:n-tuganov@gmail.com">n-tuganov@gmail.com</a>
+      <p>Менеджер: </p>
+      <p>Туганов Н.А. ИКБО-20-22</p>
+  </div>
+  <div class = "socialMedia">
+      <h2>Мы в социальных сетях</h2>
+      <a href = "https://vk.com/brrr0kk0li"><i class = "fab fa-vk"></i></a>
+      <a href = "https://www.facebook.com/?locale=ru_RU"><i class = "fab fa-facebook-f"></i></a>
+      <a href = "https://www.youtube.com"><i class = "fab fa-youtube"></i></a>
+  </div>
+  </footer>
+</body>
+
+</html>

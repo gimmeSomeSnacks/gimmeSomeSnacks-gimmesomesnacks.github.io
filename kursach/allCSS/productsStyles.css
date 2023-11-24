@@ -1,0 +1,391 @@
+a{
+    color: white;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+.mainAdaptiv p{
+    color: black;
+    text-shadow: none;
+}
+
+.mainAdaptiv{
+    margin-top: 100px;
+}
+.photoNBuy{
+    left: 100px;
+    position: relative;
+    max-height: 1000px;
+    max-width: 900px;
+    overflow: hidden;
+}
+
+.imgContainer{
+    padding: 20px;
+    background: white;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1.5rem;
+    max-width: 900px;
+    max-height: 550px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+}
+
+.imgContainer img{
+    transition: 0.3s ease;
+}
+
+#imgOne{
+    height: 100%;
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+#imgTwo{
+    height: 100%;
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+#imgThree{
+    height: 100%;
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 3;
+}
+
+#imgFour{
+    height: 100%;
+    width: 97%;
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    justify-self: end;
+}
+
+.imgContainer img:hover{
+    transform: scale(1.1);
+    border-radius: 20px;
+}
+
+.prod{
+    height: 156px;
+}
+
+.prod img:hover{
+    border: #79cbe5 2px solid;
+}
+.photoNBuy p{
+    word-wrap: break-word;
+    font-size: 18px;
+}
+
+.description{
+    top: 50px;
+    float: right;
+    position: relative;
+    max-width: 500px;
+    max-height: 800px;
+}
+
+.description p:not(:first-child){
+    font-size: 20px;
+    margin: 5px;
+}
+
+.description p:first-child, .description p:nth-child(2){
+    font-style: italic;
+    font-size: 36px;
+}
+
+
+.clickButtons *{
+    padding: 10px 20px;
+    font-size: 18px;
+    background: #F07B91;
+    border: 2px solid #F02C6E;
+    cursor: pointer;
+}
+
+.clickButtons input{
+    width: 50%;
+    border-radius: 20%;
+    text-align: center;
+}
+
+.plusMinus {
+    border-radius: 50%;
+    outline: none;
+}
+
+.buyIt{
+    background: #F07B91;
+    border: 2px solid #F02C6E;
+    width: 300px;
+    height: 50px;
+    border-radius: 30%;
+    margin-top:20px;
+    margin-left: 50px;
+}
+
+.plusMinus:active, .buyIt:active {
+    background: #F02C6E;
+    transform: translate(0, 5px);
+}
+
+.special{
+    position: relative;
+    left: 100px;
+    max-width: 900px;
+}
+
+.features{
+    display: grid;
+    grid-template-columns: 0.7fr 1fr 1.1fr 0.7fr;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.features p:nth-child(2n){
+    font-style: italic;
+}
+
+.features p:after{
+    content: "";
+    display: block;
+    border-bottom: 1px dotted;
+}
+
+#popularH2{
+    text-align: center;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.moreToys{
+    position: relative;
+    justify-items: center;
+    display: grid;
+    max-width: 1170px;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto 50px;
+}
+
+.product{
+    position: relative;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.product img{
+    border-radius: 20%;
+    width: 100%;
+    height: 100%;
+}
+
+.caption {
+    width: 100%;
+    padding-bottom: 20px;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+    text-align: center;
+}
+
+.caption span {
+    display: block;
+    opacity: 0;
+    position: relative;
+    top: 70%;
+    transition-property: top, opacity;
+    transition-duration: 0.3s;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.product::before {
+    content: '';
+    border-radius: 50px;
+    background: rgb(128, 128, 128);
+    width: 90%;
+    height: 25%;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    transition-property: top, opacity;
+    transition-duration: 0.3s;
+}
+
+.product:hover::before{
+    top: 70%;
+    opacity: 70%;
+}
+
+.product:hover span {
+    top: 0;
+    opacity: 1;
+    transition-delay: 0.12s;
+}
+
+
+.cardGood p{
+    margin-top: 10px;
+}
+
+.removeAndPrice{
+    margin-bottom: 10px;
+    justify-self: start;
+}
+
+.remove-btn:nth-child(2):hover{
+    color:red;
+    border: 2px solid red;
+    background-color: white;
+}
+
+.remove-btn:nth-child(3):hover{
+    color: #E87302;
+    border: 2px solid #E87302;
+    background-color: white;
+}
+
+.remove-btn:nth-child(4):hover{
+    color:green;
+    border: 2px solid green;
+    background-color: white;
+}
+
+.remove-btn{
+    background: #F07B91;
+    border: 2px solid #F02C6E;
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#empty{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+}
+
+@media (max-width: 1500px){
+    .photoNBuy{
+        left: 40px;
+    }
+}
+
+
+@media (max-width: 1200px) {
+
+    .mainAdaptiv{
+        display: grid;
+    }
+
+    .photoNBuy{
+        grid-row-start: 1;
+        left: 50px;
+        margin-bottom: 0;
+    }
+
+    .photoNBuy h1{
+        font-size: 3em;
+        margin-bottom: 30px;
+    }
+
+    .description{
+        max-width: 90%;
+        display: flex;
+        flex-direction: column;
+        top: 50px;
+        left: 50px;
+    }
+
+    .description p:first-child{
+        font-size: 4em;
+        margin-top: 0;
+    }
+    .clickButtons{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .clickButtons *{
+        width: 75px;
+        font-size: 3em;
+        margin: 4px;
+    }
+
+    .buyIt{
+        font-size: 3em;
+        width: 500px;
+        height: 100px;
+        position: relative;
+        left: 16%;
+    }
+
+    .special{
+        top: 50px;
+        left: 50px;
+    }
+
+    .description h2{
+        margin-left: 40px;
+        font-size: 2em;
+    }
+
+    .features{
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 50px;
+        align-items: end;
+    }
+
+    .features p{
+        font-size: 20px;
+    }
+
+    .special h1, .special h2{
+        margin-left: 40px;
+    }
+
+    .moreToys{
+        grid-template-columns: 1fr 1fr;
+        margin: 0;
+    }
+
+    .product{
+        max-width: 400px;
+        max-height: 400px;
+        margin: 30px;
+    }
+    
+    .product span{
+        font-size: 20px;
+    }
+
+    .remove-btn{
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+        margin-right: 40px;
+    }
+}

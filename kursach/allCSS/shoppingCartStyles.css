@@ -1,0 +1,211 @@
+main{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 50px 0 auto;
+    margin-top: 100px;
+}
+
+main p{
+    color: black;
+    text-shadow: none;
+}
+
+.cart{
+    position: relative;
+    left: 50px;
+    width: 1000px;
+}
+
+.contactsMenu{
+    border-radius: 20px;
+    backdrop-filter: opacity(80%);
+    width: 25%;
+    max-height: 700px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: #EF8888;
+}
+
+.contactsMenu h2{
+    margin-left: 10px;
+}
+
+.contactsMenu p{
+    font-size: 20px;
+    margin: 10px;
+}
+
+#text2{
+    font-style: italic;
+}
+
+.textInput input{
+    border-radius: 20px;
+    margin: 10px;
+    padding: 5px;
+    background: #EFB19C;
+    border: rgb(128, 128, 128);
+    height: 30px;
+    width: 340px;
+}
+
+.paymentChoose{
+    display: flex;
+    flex-direction: column;
+}
+
+.paymentChoose label{
+    margin: 10px;
+    font-size: 20px;
+}
+
+.topBar{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 0.7fr 0.7fr 0.7fr;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+    border-bottom: solid 2px rgb(128, 128, 128);
+}
+
+.topBar div{
+    border-left: solid 2px rgb(128, 128, 128);
+    border-top: solid 2px rgb(128, 128, 128);
+    padding: 10px;
+}
+
+.topBar div:last-child{
+    border-right: solid 2px rgb(128, 128, 128);
+}
+
+.topBar p{
+    font-size: 20px;
+    margin: 0;
+}
+
+.topBar div:first-child{
+    border-radius: 20px 0 0 0;
+}
+
+.topBar div:last-child{
+    border-radius: 0 20px 0 0;
+}
+
+.oneGood{
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1fr 0.7fr 0.7fr 0.7fr;
+    align-items: center;
+    justify-items: center;
+    border-bottom: solid 2px rgb(128, 128, 128);
+}
+
+.card{
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-weight: 550;
+    text-decoration: none;
+    justify-items: center;
+    align-items: center;
+}
+
+.card img{
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+}
+
+.card a{
+    color: black;
+    text-decoration: none;
+}
+
+.remove-btn:nth-child(2):hover{
+    color:red;
+    border: 2px solid red;
+    background-color: white;
+}
+
+
+.remove-btn{
+    background: #F07B91;
+    border: 2px solid #F02C6E;
+    margin-left: 10px;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    font-size: 15px;
+    text-align: center;
+}
+
+@media (max-width: 1200px){
+    main{
+        margin-bottom: 50px;
+    }
+
+    .cart{
+        left: 25px;
+    }
+
+    .contactsMenu{
+        max-height: 1000px;
+        width: 100%;
+        position: relative;
+        left: 25px;
+    }
+
+    .contactsMenu h2{
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .textInput{
+        display: grid;
+        justify-content: center;
+    }
+
+    .textInput input{
+        width: 600px;
+        padding: 20px;
+        font-size: 30px;
+    }
+
+    .contactsMenu p, .paymentChoose label{
+        font-size: 30px;
+        position: relative;
+        left: 50px;
+    }
+
+    .topBar p, .oneGood a, .cartGoods p{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    
+    .card {
+        grid-template-columns: none;
+    }
+
+    .card img{
+        width: 300px;
+        height: 300px;
+    }
+
+    .remove-btn{
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+    }
+
+    .removeAndPrice{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 0.5fr;
+        grid-template-rows: 1fr;
+    }
+}

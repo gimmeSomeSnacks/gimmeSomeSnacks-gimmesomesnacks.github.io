@@ -1,0 +1,146 @@
+.mainText{
+    top: 100px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    z-index: 1;
+    margin: 0 auto;
+}
+
+.mainText p{
+    text-shadow: none;
+}
+
+.boxMap h2{
+    margin-left: 100px;
+}
+
+.boxVideo h2{
+    margin-right: 100px;
+}
+
+.boxVideo{
+    max-width: 500px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.mainText section{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.questions{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+}
+
+.oneQuestion{
+    height: 300px;
+    word-wrap: break-word;
+}
+
+.oneQuestion p, h3{
+    color: black;
+    text-align: center;
+}
+
+.oneQuestion{
+    background: rgb(128, 128, 128, 0.3);
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+}
+
+.oneQuestion:hover{
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+}
+section h1{
+    text-align: center;
+    font-size: 300%;
+}
+
+.end{
+    margin-top: 200px;
+}
+
+.removeAndPrice{
+    margin-bottom: 10px;
+    justify-self: start;
+}
+
+.remove-btn:nth-child(2):hover{
+    color:red;
+    border: 2px solid red;
+    background-color: white;
+}
+
+.remove-btn:nth-child(3):hover{
+    color: #E87302;
+    border: 2px solid #E87302;
+    background-color: white;
+}
+
+.remove-btn:nth-child(4):hover{
+    color:green;
+    border: 2px solid green;
+    background-color: white;
+}
+
+.remove-btn{
+    background: #F07B91;
+    border: 2px solid #F02C6E;
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#empty{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+}
+
+@media (max-width: 1000px){
+    .boxVideo, .iframeMap{
+        max-width: 800px;
+        left: 50px;
+        height: 800px;
+        width: 800px;
+    }
+    
+    .iframeVideo{
+        width: 100%;
+        height: 100%;
+    }
+
+    .boxVideo h2{
+        margin-left: 50px;
+    }
+
+    .questions{
+        padding: 20px;
+        grid-template-columns: 1fr 1fr;
+    }   
+
+    .oneQuestion{
+        height: 100%;
+    }
+
+    .oneQuestion *{
+        font-size: 30px;
+    }
+    
+    .remove-btn{
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+        margin-right: 40px;
+    }
+}

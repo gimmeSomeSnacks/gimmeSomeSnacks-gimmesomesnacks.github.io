@@ -1,0 +1,473 @@
+body {
+    background: linear-gradient(#ffc097, #ff8888);
+    margin: 0;
+}
+
+header *{
+    z-index: 5;
+}
+
+.menu {
+    display: grid;
+    justify-items: stretch;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: linear-gradient(to bottom right,#ff7b00, #ff2ca0);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 82px;
+    font-size: 105%;
+}
+
+.menuBox{
+    position: relative;
+    height: 100%;
+}
+
+.menuBox p {
+    text-shadow: none;
+}
+
+.menu a:first-child{
+    padding: 0;
+}
+
+#first{
+    border-bottom-left-radius: 20px;
+}
+
+#last{
+    border-bottom-right-radius: 20px;
+}
+
+.menu a:hover:first-child{
+    border-bottom-left-radius: 20px;
+}
+
+.menuBox:hover{
+    background-color: white;
+}
+
+.menuBox:hover p{
+    color: #ff7b00;
+}
+
+.menuBox p{
+    position: relative;
+    top:25%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+
+
+#menu__toggle {
+    visibility: hidden;
+}
+
+.menu__btn {
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    z-index: 8;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    display: block;
+    position: absolute; 
+    width: 100%;
+    height: 4px;
+    background-color: white;
+}
+
+.menu__btn > span::before {
+    content: '';
+    top: -16px;
+}
+.menu__btn > span::after {
+    content: '';
+    top: 16px;
+}
+
+.menu__box {
+    z-index: 7;
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 100px 0;
+    list-style: none;
+    text-align: center;
+    background: linear-gradient(to bottom right,#ff7b00, #ff2ca0);
+    transition: 0.5s ease;
+}
+
+.menu__item {
+    color: white;
+    display: block;
+    padding: 12px 24px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.menu__item:hover {
+    color: #ff7b00;
+    background-color: white;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;
+}
+
+.hamburger-menu:last-child{
+    visibility: hidden;
+}
+
+.end{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: grid;
+    padding: 50px 100px;
+    grid-template-columns: 0.18fr 0.25fr 0.27fr 0.19fr;
+    gap: 10px;
+    align-items: start;
+    justify-content: center;
+    background: linear-gradient(to bottom right, #ff7b00, #ff2ca0);
+    overflow: hidden;
+}
+
+.end a, p{
+    color: white;
+    font-size: 18px;
+    padding: 7px;
+    text-shadow: 0 0 2px black;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.end a:hover{
+    text-shadow: none;
+    color: black;
+}
+
+.end > *{
+    justify-items: start;
+    display: grid;
+    align-content: space-between;
+}
+
+.contacts{
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.contacts a, p{
+    padding: 0;
+}
+
+.contacts h2{
+    grid-column: 1 / span 2;
+}
+
+.socialMedia a{
+    text-shadow: none;
+    color: black;
+    height: 30px;
+    width: 30px;
+    background: white;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    cursor: pointer;
+}
+
+.socialMedia h2 {
+    grid-column: 1 / span 3;
+}
+
+.socialMedia a::after {
+    content: "";
+    border-radius: 50%;
+    background: linear-gradient(to bottom right, #ffc097, #ff8888);
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: scale(0, 0);
+}
+
+.socialMedia a:hover::after {
+    transition: all 0.3s ease-out;
+    transform: scale(1, 1);
+}
+
+.socialMedia a{
+    line-height: 30px;
+    font-size: 15px;
+}
+
+#toggleGoods {
+    visibility: hidden;
+}
+
+.hamburgerGoods p, .a{
+    text-shadow: none;
+    color: black
+}
+
+.btnGoods {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    z-index: 9;
+}
+
+.btnGoods img{
+    width: 100%;
+    height: 100%;
+}
+
+.fullBackground{
+    z-index: 6;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    transition: 0.5s ease;
+    background: linear-gradient(to right, #e7e7f8, #E8A302, #EF1CB3);
+    opacity: 50%;
+    width: 100%;
+}
+
+.boxGoods {
+    z-index: 8;
+    box-shadow: 0 0 5px rgb(128, 128, 128);
+    background: linear-gradient(#ffc097, #ff8888);
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    margin: 0;
+    padding: 40px 0;
+    transition: 0.5s ease;
+    width: 30%;
+}
+
+.allCards{
+    max-height: 500px;
+    overflow: auto;
+    margin-bottom: 30px;
+}
+
+.allCards > div{
+    margin: 24px;
+    padding-bottom: 5px;
+    border-bottom: solid black 2px;
+}
+
+.boxGoods h2{
+    width: 100%;
+    text-align: center;
+}
+
+.cardGood{
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    justify-items: center;
+}
+
+.cardGood p{
+    margin: 0;
+    width: 100%;
+    height: 30%;
+}
+
+.cardGood a:first-child{
+    grid-row: 1 / span 3;
+}
+
+.cardGood img{ 
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+}
+
+#toggleGoods:checked ~ * {
+    visibility: visible;
+    right: 0;
+}
+
+.shineButton {
+    text-decoration: none;
+    padding: 10px 30px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    overflow: hidden;
+    border: 2px solid #F02C6E;
+    border-radius: 8px;
+    font-size: 25px;
+    color: #F02C6E;
+    transition: .2s ease-in-out;
+}
+
+.shineButton:before {
+    content: "";
+    background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: -1%;
+    left: -100%;
+    transform: skewX(-45deg);
+}
+
+.shineButton:hover {
+    background: #F07B91;
+    color: #fff;
+}
+
+.shineButton:hover:before {
+    left: 150px;
+    transition: .5s ease-in-out;
+}
+
+@media (max-width: 1200px){
+    .menu__btn{
+        visibility: visible;
+    }
+
+    .menu{
+        height: 100px;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .menu a:not(:first-child){
+        visibility: hidden;
+    }
+
+    .menu a:first-child{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .hamburger-menu:last-child{
+        visibility: visible;
+    }
+
+    .hamburger-menu a{
+        padding: 40px;
+        font-size: 50px;
+    }
+
+    .menu__box{
+        opacity: 90%;
+    }
+    .end {
+        grid-template-columns: 1fr 0.7fr;
+        justify-content: stretch;
+    }
+    .end a, p{
+        font-size: 10px;
+        padding: 7px;
+    }
+
+    .contacts{
+        justify-items: normal;
+        grid-template-columns: 1fr;
+    }
+
+    .contacts h2{
+        grid-column: 1;
+    }
+
+    .socialMedia a{
+        line-height: 60px;
+        font-size: 20px;
+        height: 60px;
+        width: 60px;
+    }
+
+    .end {
+        grid-template-columns: 1fr;
+    }
+
+    .fullBackground{
+        opacity: 0;
+    }
+
+    .boxGoods{
+        width: 100%;
+    }
+
+    .boxGoods h2{
+        font-size: 60px;
+    }
+
+    .cardGood img{
+        width: 300px;
+        height: 300px;
+    }
+
+    .allCards{
+        max-height: 1000px;
+    }
+
+    .cardGood p{
+        padding: 0;
+        font-size: 30px;
+    }
+
+    .shineButton{
+        font-size: 50px;
+        height: 100px;
+        width: 90%;
+    }
+
+    .btnGoods{
+        width: 100px;
+        height: 100px;
+    }
+}
