@@ -366,6 +366,9 @@ a{
     .special h1, .special h2{
         margin-left: 40px;
     }
+    .special p{
+        font-size: 10px;
+    }
 
     .moreToys{
         grid-template-columns: 1fr 1fr;
