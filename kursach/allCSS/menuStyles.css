@@ -406,7 +406,7 @@ header *{
         opacity: 90%;
     }
     .end {
-        grid-template-columns: 1fr 0.7fr;
+        grid-template-columns: 1fr;
         justify-content: stretch;
     }
     .end a, p{
@@ -427,10 +427,6 @@ header *{
         font-size: 20px;
         height: 60px;
         width: 60px;
-    }
-
-    .end {
-        grid-template-columns: 1fr;
     }
 
     .fullBackground{
