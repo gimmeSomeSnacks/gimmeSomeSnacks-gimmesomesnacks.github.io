@@ -37,6 +37,15 @@ function removeItem(index) {
 }
 
 function removeAll(){
+    var form = document.getElementById("myContacts");
+    var elements = form.elements;
+
+    for (var i = 0; i < elements.length; i++) {
+        if (elements[i].hasAttribute("required") && elements[i].value.trim() === "") {
+            alert("Пожалуйста, заполните все обязательные поля.");
+            return;
+        }
+    }
     alert("Заказ успешно оформлен, ожидайте письма на почту или звонка на телефон!");
     localStorage.removeItem('cart');
     window.location.href = '/kursach/allHTML/main.html';
