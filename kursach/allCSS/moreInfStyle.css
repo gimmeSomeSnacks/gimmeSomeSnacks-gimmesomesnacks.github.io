@@ -12,6 +12,11 @@
     text-shadow: none;
 }
 
+.boxMap{
+    position: relative;
+    right: 50px;
+}
+
 .boxMap h2{
     margin-left: 100px;
 }
@@ -28,7 +33,7 @@
 }
 
 .mainText section{
-    max-width: 1170px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
